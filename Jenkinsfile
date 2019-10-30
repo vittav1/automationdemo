@@ -39,6 +39,7 @@ node('awsnode') {
     echo 'Artifacts copied'
 
     echo 'Copy'
+    sh "mkdir /var/www/html"
     sh "yes | sudo cp -R bundle.tar.gz /var/www/html && cd /var/www/html && sudo tar -xvf bundle.tar.gz"
     echo 'Copy completed'
 }
